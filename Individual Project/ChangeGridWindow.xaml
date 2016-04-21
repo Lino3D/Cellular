@@ -1,0 +1,14 @@
+﻿<Window x:Class="Individual_Project.ChangeGridWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Grid Setup" Height="300" Width="300">
+    <Grid>
+        <Button Content="Accept" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="75" Click="Accept_Click"/>
+        <TextBox x:Name="XValue" HorizontalAlignment="Left" Height="23" Margin="55,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="YValue" HorizontalAlignment="Left" Height="23" Margin="55,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="12,57,0,0" VerticalAlignment="Top"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="12,98,0,0" VerticalAlignment="Top"/>
+        <Button Content="Dismiss" HorizontalAlignment="Left" Margin="207,238,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Window>

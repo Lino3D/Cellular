@@ -1,0 +1,52 @@
+﻿<Window x:Class="Individual_Project.AddRuleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rule Edit Window" Height="445" Width="392.381" MaxHeight="500" MaxWidth="450" Closing="Window_Closing" >
+    <Grid x:Name="MainGrid" Margin="0,0,2,-2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition Width="172*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Accept" Margin="10,112,80,0" VerticalAlignment="Top" RenderTransformOrigin="0.293,0.727" Click="Accept_Click" Grid.Row="2" Grid.ColumnSpan="2" Height="22"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="112,112,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.293,0.727" Grid.Row="2" Grid.Column="2" Height="22" Click="Cancel_Click"/>
+
+        <ComboBox x:Name="NCombo" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="NeighbourhoodComboBox_SelectionChanged" Grid.Column="2" Height="22" SelectedValuePath="Content">
+            <ComboBoxItem Content="4 Point"/>
+            <ComboBoxItem Content="8 Point"/>
+            <ComboBoxItem Content="24 Point"/>
+
+        </ComboBox>
+        <ComboBox x:Name="MainStateCombo" Grid.Column="2" HorizontalAlignment="Left" Margin="8,51,0,0" Grid.Row="2" VerticalAlignment="Top" Width="118" SelectionChanged="MainStateCombo_SelectionChanged" SelectedIndex="0" SelectedValuePath="Content" Height="22">
+            <ComboBoxItem Content="Live"/>
+            <ComboBoxItem Content="Die"/>
+        </ComboBox>
+        <Label Content="Main Cell State in Next Step" Grid.Column="2" HorizontalAlignment="Left" Margin="0,10,0,101" Grid.Row="2" RenderTransformOrigin="0.642,-1.231" Width="157"/>
+        <Label Content="Neighbourhood" Grid.Column="2" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Height="26" Width="95"/>
+        <TextBox x:Name="NameBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,29,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="122" MaxLength="12" KeyDown="NameBox_KeyDown" CommandManager.PreviewExecuted="textBox_PreviewExecuted"
+         ContextMenu="{x:Null}"/>
+        <ComboBox x:Name="BrushCombo" Grid.Column="2" HorizontalAlignment="Left" Margin="8,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="BrushCombo_SelectionChanged" SelectedIndex="0" Height="22">
+            <ComboBoxItem Content="Alive State"/>
+            <ComboBoxItem Content="Dead State"/>
+        </ComboBox>
+        <Label Content="Cell Brush" Grid.Column="2" HorizontalAlignment="Left" Margin="14,56,0,0" VerticalAlignment="Top" Height="26" Width="63"/>
+        <RadioButton x:Name="NumberOnlyBox" Content="Only Number" Grid.Column="2" HorizontalAlignment="Left" Margin="8,104,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="OnlyNumber_Checked" Height="23" Width="131"/>
+        <RadioButton x:Name="PositionTooBox" Content="Position and Number" Grid.Column="2" HorizontalAlignment="Left" Margin="8,72,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="PositionAndNumber_Checked" IsChecked="True" Height="27" Width="149" />
+        <Label Content="Dead" Grid.Column="1" HorizontalAlignment="Left" Margin="35,54,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.421,0.038" Visibility="Hidden" Height="26" Width="38"/>
+        <Label Content="Active" Grid.Column="2" HorizontalAlignment="Left" Margin="0,149,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.278,0.538" Height="26" Width="42"/>
+        <TextBox x:Name="White" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="82,56,0,0" Grid.Row="2" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="30" IsReadOnly="True" Visibility="Hidden"/>
+        <TextBox x:Name="Black" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="47,151,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="30" IsReadOnly="True"/>
+        <Label Content="To" Grid.Column="2" HorizontalAlignment="Left" Margin="84,149,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.158,0.115" Height="23" Width="23"/>
+        <TextBox x:Name="BlackMax" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="127,151,0,0" Grid.Row="1" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="32" TextChanged="BlackMax_TextChanged" RenderTransformOrigin="0.562,0.913" IsReadOnly="True"/>
+        <Label Content="What is considered" Grid.Column="2" HorizontalAlignment="Left" Margin="10,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145"/>
+
+
+
+    </Grid>
+</Window>
